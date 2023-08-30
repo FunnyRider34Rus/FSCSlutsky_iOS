@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C76DF91526F465211F70028 /* Pods_FSCSlutsky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5566F2769C84385494C41535 /* Pods_FSCSlutsky.framework */; };
+		4DFA021FC9A95B30E796F62D /* Pods_FSCSlutskyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1266F9B9940AB44CD2CAAA52 /* Pods_FSCSlutskyTests.framework */; };
+		5C821523350D0B6FADC2E528 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336E717C8FF05C2423CEC9A9 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework */; };
 		DC370AC92A9E5F3B002D12DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */; };
 		DC370ACB2A9E5F3B002D12DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ACA2A9E5F3B002D12DB /* SceneDelegate.swift */; };
-		DC370ACD2A9E5F3B002D12DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ACC2A9E5F3B002D12DB /* ViewController.swift */; };
-		DC370AD02A9E5F3B002D12DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC370ACE2A9E5F3B002D12DB /* Main.storyboard */; };
+		DC370ACD2A9E5F3B002D12DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */; };
 		DC370AD22A9E5F3E002D12DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC370AD12A9E5F3E002D12DB /* Assets.xcassets */; };
 		DC370AD52A9E5F3E002D12DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC370AD32A9E5F3E002D12DB /* LaunchScreen.storyboard */; };
 		DC370AE02A9E5F3F002D12DB /* FSCSlutskyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ADF2A9E5F3F002D12DB /* FSCSlutskyTests.swift */; };
 		DC370AEA2A9E5F3F002D12DB /* FSCSlutskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AE92A9E5F3F002D12DB /* FSCSlutskyUITests.swift */; };
 		DC370AEC2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AEB2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift */; };
+		DC704B702A9FCDFC0048E52A /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B6F2A9FCDFC0048E52A /* AppConst.swift */; };
+		DC704B722A9FD1580048E52A /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC704B712A9FD1580048E52A /* AuthViewController.storyboard */; };
+		DC86FFEF2A9E66B900A5DA98 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1266F9B9940AB44CD2CAAA52 /* Pods_FSCSlutskyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSCSlutskyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		336E717C8FF05C2423CEC9A9 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSCSlutsky_FSCSlutskyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5566F2769C84385494C41535 /* Pods_FSCSlutsky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FSCSlutsky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6519AEB16D0623A05BD232 /* Pods-FSCSlutsky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky.release.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky/Pods-FSCSlutsky.release.xcconfig"; sourceTree = "<group>"; };
+		5F6EAF22E754C5DB93774259 /* Pods-FSCSlutskyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutskyTests.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutskyTests/Pods-FSCSlutskyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67F229982E9751C8DCC3883B /* Pods-FSCSlutsky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky/Pods-FSCSlutsky.debug.xcconfig"; sourceTree = "<group>"; };
 		DC370AC52A9E5F3B002D12DB /* FSCSlutsky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSCSlutsky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC370ACA2A9E5F3B002D12DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC370ACC2A9E5F3B002D12DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC370ACF2A9E5F3B002D12DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		DC370AD12A9E5F3E002D12DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC370AD42A9E5F3E002D12DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC370AD62A9E5F3E002D12DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +59,12 @@
 		DC370AE52A9E5F3F002D12DB /* FSCSlutskyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSCSlutskyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC370AE92A9E5F3F002D12DB /* FSCSlutskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCSlutskyUITests.swift; sourceTree = "<group>"; };
 		DC370AEB2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCSlutskyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC704B6F2A9FCDFC0048E52A /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
+		DC704B712A9FD1580048E52A /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DCDEF8476ECBF56C7B9E82BB /* Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3D22E325DB0345D7C5C8072 /* Pods-FSCSlutskyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutskyTests.release.xcconfig"; path = "Target Support Files/Pods-FSCSlutskyTests/Pods-FSCSlutskyTests.release.xcconfig"; sourceTree = "<group>"; };
+		FBE17BCC8577506561842DC5 /* Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C76DF91526F465211F70028 /* Pods_FSCSlutsky.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFA021FC9A95B30E796F62D /* Pods_FSCSlutskyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C821523350D0B6FADC2E528 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4196E3E562941980E3A5DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67F229982E9751C8DCC3883B /* Pods-FSCSlutsky.debug.xcconfig */,
+				5B6519AEB16D0623A05BD232 /* Pods-FSCSlutsky.release.xcconfig */,
+				DCDEF8476ECBF56C7B9E82BB /* Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig */,
+				FBE17BCC8577506561842DC5 /* Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig */,
+				5F6EAF22E754C5DB93774259 /* Pods-FSCSlutskyTests.debug.xcconfig */,
+				E3D22E325DB0345D7C5C8072 /* Pods-FSCSlutskyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCC5C050878CD56A9D2075CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5566F2769C84385494C41535 /* Pods_FSCSlutsky.framework */,
+				336E717C8FF05C2423CEC9A9 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework */,
+				1266F9B9940AB44CD2CAAA52 /* Pods_FSCSlutskyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC370ABC2A9E5F3B002D12DB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				DC370ADE2A9E5F3F002D12DB /* FSCSlutskyTests */,
 				DC370AE82A9E5F3F002D12DB /* FSCSlutskyUITests */,
 				DC370AC62A9E5F3B002D12DB /* Products */,
+				0E4196E3E562941980E3A5DA /* Pods */,
+				CCC5C050878CD56A9D2075CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +143,12 @@
 		DC370AC72A9E5F3B002D12DB /* FSCSlutsky */ = {
 			isa = PBXGroup;
 			children = (
+				DC704B6E2A9FCDCA0048E52A /* Core */,
+				DC86FFED2A9E668F00A5DA98 /* Services */,
 				DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */,
 				DC370ACA2A9E5F3B002D12DB /* SceneDelegate.swift */,
-				DC370ACC2A9E5F3B002D12DB /* ViewController.swift */,
-				DC370ACE2A9E5F3B002D12DB /* Main.storyboard */,
+				DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */,
+				DC704B712A9FD1580048E52A /* AuthViewController.storyboard */,
 				DC370AD12A9E5F3E002D12DB /* Assets.xcassets */,
 				DC370AD32A9E5F3E002D12DB /* LaunchScreen.storyboard */,
 				DC370AD62A9E5F3E002D12DB /* Info.plist */,
@@ -127,6 +173,22 @@
 			path = FSCSlutskyUITests;
 			sourceTree = "<group>";
 		};
+		DC704B6E2A9FCDCA0048E52A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DC704B6F2A9FCDFC0048E52A /* AppConst.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DC86FFED2A9E668F00A5DA98 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC370AEF2A9E5F3F002D12DB /* Build configuration list for PBXNativeTarget "FSCSlutsky" */;
 			buildPhases = (
+				8393666059784135237BBA98 /* [CP] Check Pods Manifest.lock */,
 				DC370AC12A9E5F3B002D12DB /* Sources */,
 				DC370AC22A9E5F3B002D12DB /* Frameworks */,
 				DC370AC32A9E5F3B002D12DB /* Resources */,
+				3C06C0397AE0D5406838522E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC370AF22A9E5F3F002D12DB /* Build configuration list for PBXNativeTarget "FSCSlutskyTests" */;
 			buildPhases = (
+				C93C10C4E3F089EF7BEDCDE5 /* [CP] Check Pods Manifest.lock */,
 				DC370AD72A9E5F3F002D12DB /* Sources */,
 				DC370AD82A9E5F3F002D12DB /* Frameworks */,
 				DC370AD92A9E5F3F002D12DB /* Resources */,
@@ -169,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC370AF52A9E5F3F002D12DB /* Build configuration list for PBXNativeTarget "FSCSlutskyUITests" */;
 			buildPhases = (
+				03925E4C30966A1B9E84A652 /* [CP] Check Pods Manifest.lock */,
 				DC370AE12A9E5F3F002D12DB /* Sources */,
 				DC370AE22A9E5F3F002D12DB /* Frameworks */,
 				DC370AE32A9E5F3F002D12DB /* Resources */,
+				F8030DFD673F7F82E7833E49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,8 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC370AD52A9E5F3E002D12DB /* LaunchScreen.storyboard in Resources */,
+				DC704B722A9FD1580048E52A /* AuthViewController.storyboard in Resources */,
 				DC370AD22A9E5F3E002D12DB /* Assets.xcassets in Resources */,
-				DC370AD02A9E5F3B002D12DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +320,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03925E4C30966A1B9E84A652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FSCSlutsky-FSCSlutskyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C06C0397AE0D5406838522E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FSCSlutsky/Pods-FSCSlutsky-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FSCSlutsky/Pods-FSCSlutsky-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FSCSlutsky/Pods-FSCSlutsky-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8393666059784135237BBA98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FSCSlutsky-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C93C10C4E3F089EF7BEDCDE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FSCSlutskyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8030DFD673F7F82E7833E49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC370AC12A9E5F3B002D12DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC370ACD2A9E5F3B002D12DB /* ViewController.swift in Sources */,
+				DC370ACD2A9E5F3B002D12DB /* AuthViewController.swift in Sources */,
 				DC370AC92A9E5F3B002D12DB /* AppDelegate.swift in Sources */,
 				DC370ACB2A9E5F3B002D12DB /* SceneDelegate.swift in Sources */,
+				DC86FFEF2A9E66B900A5DA98 /* AuthService.swift in Sources */,
+				DC704B702A9FCDFC0048E52A /* AppConst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +469,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DC370ACE2A9E5F3B002D12DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC370ACF2A9E5F3B002D12DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC370AD32A9E5F3E002D12DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,6 +596,7 @@
 		};
 		DC370AF02A9E5F3F002D12DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67F229982E9751C8DCC3883B /* Pods-FSCSlutsky.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,7 +607,6 @@
 				INFOPLIST_FILE = FSCSlutsky/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +624,7 @@
 		};
 		DC370AF12A9E5F3F002D12DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B6519AEB16D0623A05BD232 /* Pods-FSCSlutsky.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,7 +635,6 @@
 				INFOPLIST_FILE = FSCSlutsky/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,6 +652,7 @@
 		};
 		DC370AF32A9E5F3F002D12DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F6EAF22E754C5DB93774259 /* Pods-FSCSlutskyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +673,7 @@
 		};
 		DC370AF42A9E5F3F002D12DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3D22E325DB0345D7C5C8072 /* Pods-FSCSlutskyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +694,7 @@
 		};
 		DC370AF62A9E5F3F002D12DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCDEF8476ECBF56C7B9E82BB /* Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +713,7 @@
 		};
 		DC370AF72A9E5F3F002D12DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE17BCC8577506561842DC5 /* Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
