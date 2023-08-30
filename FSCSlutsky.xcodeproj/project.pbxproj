@@ -20,6 +20,9 @@
 		DC370AEC2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AEB2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift */; };
 		DC704B702A9FCDFC0048E52A /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B6F2A9FCDFC0048E52A /* AppConst.swift */; };
 		DC704B722A9FD1580048E52A /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC704B712A9FD1580048E52A /* AuthViewController.storyboard */; };
+		DC704B742A9FE3650048E52A /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */; };
+		DC704B762A9FE8100048E52A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B752A9FE8100048E52A /* FeedViewController.swift */; };
+		DC704B782A9FE8470048E52A /* FeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC704B772A9FE8470048E52A /* FeedViewController.storyboard */; };
 		DC86FFEF2A9E66B900A5DA98 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,9 @@
 		DC370AEB2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCSlutskyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC704B6F2A9FCDFC0048E52A /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 		DC704B712A9FD1580048E52A /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		DC704B752A9FE8100048E52A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DC704B772A9FE8470048E52A /* FeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedViewController.storyboard; sourceTree = "<group>"; };
 		DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DCDEF8476ECBF56C7B9E82BB /* Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3D22E325DB0345D7C5C8072 /* Pods-FSCSlutskyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutskyTests.release.xcconfig"; path = "Target Support Files/Pods-FSCSlutskyTests/Pods-FSCSlutskyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,12 +149,12 @@
 		DC370AC72A9E5F3B002D12DB /* FSCSlutsky */ = {
 			isa = PBXGroup;
 			children = (
+				DC704B7A2A9FE9680048E52A /* AuthViewController */,
+				DC704B792A9FE93E0048E52A /* FeedViewController */,
 				DC704B6E2A9FCDCA0048E52A /* Core */,
 				DC86FFED2A9E668F00A5DA98 /* Services */,
 				DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */,
 				DC370ACA2A9E5F3B002D12DB /* SceneDelegate.swift */,
-				DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */,
-				DC704B712A9FD1580048E52A /* AuthViewController.storyboard */,
 				DC370AD12A9E5F3E002D12DB /* Assets.xcassets */,
 				DC370AD32A9E5F3E002D12DB /* LaunchScreen.storyboard */,
 				DC370AD62A9E5F3E002D12DB /* Info.plist */,
@@ -181,10 +187,29 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		DC704B792A9FE93E0048E52A /* FeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC704B752A9FE8100048E52A /* FeedViewController.swift */,
+				DC704B772A9FE8470048E52A /* FeedViewController.storyboard */,
+			);
+			path = FeedViewController;
+			sourceTree = "<group>";
+		};
+		DC704B7A2A9FE9680048E52A /* AuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */,
+				DC704B712A9FD1580048E52A /* AuthViewController.storyboard */,
+			);
+			path = AuthViewController;
+			sourceTree = "<group>";
+		};
 		DC86FFED2A9E668F00A5DA98 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */,
+				DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,6 +326,7 @@
 				DC370AD52A9E5F3E002D12DB /* LaunchScreen.storyboard in Resources */,
 				DC704B722A9FD1580048E52A /* AuthViewController.storyboard in Resources */,
 				DC370AD22A9E5F3E002D12DB /* Assets.xcassets in Resources */,
+				DC704B782A9FE8470048E52A /* FeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +455,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC370ACD2A9E5F3B002D12DB /* AuthViewController.swift in Sources */,
+				DC704B742A9FE3650048E52A /* AuthServiceProtocol.swift in Sources */,
 				DC370AC92A9E5F3B002D12DB /* AppDelegate.swift in Sources */,
 				DC370ACB2A9E5F3B002D12DB /* SceneDelegate.swift in Sources */,
 				DC86FFEF2A9E66B900A5DA98 /* AuthService.swift in Sources */,
 				DC704B702A9FCDFC0048E52A /* AppConst.swift in Sources */,
+				DC704B762A9FE8100048E52A /* FeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

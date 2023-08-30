@@ -20,17 +20,35 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         vkSDK.uiDelegate = self
     }
     
+    weak var delegate: AuthServiceProtocol?
+    
+    func wakeUpSession() {
+        //массив прав доступа
+        let scope = ["offline"]
+        VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
+            switch state {
+            case .initialized:
+                VKSdk.authorize(scope)
+            case .authorized:
+                delegate?.authServiceSignIn()
+            default:
+                delegate?.authServiceSignInDidFail()
+            }
+        }
+    }
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
-       
+        if result.token != nil {
+            delegate?.authServiceSignIn()
+        }
     }
     
     func vkSdkUserAuthorizationFailed() {
-       
+        delegate?.authServiceSignInDidFail()
     }
     
     func vkSdkShouldPresent(_ controller: UIViewController!) {
-        
+        delegate?.authServiceShouldPresent(viewController: controller)
     }
     
     func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {

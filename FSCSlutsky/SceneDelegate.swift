@@ -8,10 +8,16 @@
 import UIKit
 import VK_ios_sdk
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, AuthServiceProtocol {
 
     var window: UIWindow?
     var authService: AuthService!
+    
+    static func shared() -> SceneDelegate {
+        let scene = UIApplication.shared.connectedScenes.first
+        let sceneDelegate: SceneDelegate = ((scene?.delegate as? SceneDelegate)!)
+        return sceneDelegate
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,8 +27,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         authService = AuthService()
-        let authVC = UIStoryboard(name: "AuthViewController", bundle: nil).instantiateInitialViewController() as? AuthViewController
-        window?.rootViewController = authVC
+        authService.delegate = self
+        let authViewController = UIStoryboard(name: "AuthViewController", bundle: nil).instantiateInitialViewController() as? AuthViewController
+        window?.rootViewController = authViewController
         window?.makeKeyAndVisible()
     }
     
@@ -60,6 +67,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    // MARK: - AuthServiceProtocol
+    
+    func authServiceShouldPresent(viewController: UIViewController) {
+        window?.rootViewController?.present(viewController, animated: true)
+    }
+    
+    func authServiceSignIn() {
+        let feedViewController = UIStoryboard(name: "FeedViewController", bundle: nil).instantiateInitialViewController() as! FeedViewController
+        let navigationViewController = UINavigationController(rootViewController: feedViewController)
+        window?.rootViewController = navigationViewController
+    }
+    
+    func authServiceSignInDidFail() {
+        
+    }
 }
 
