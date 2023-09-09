@@ -22,9 +22,13 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     weak var delegate: AuthServiceProtocol?
     
+    var token: String? {
+        return VKSdk.accessToken().accessToken
+    }
+    
     func wakeUpSession() {
         //массив прав доступа
-        let scope = ["offline"]
+        let scope = ["wall", "friends"]
         VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
             switch state {
             case .initialized:

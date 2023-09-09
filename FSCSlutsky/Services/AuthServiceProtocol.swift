@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AuthServiceProtocol: class {
+protocol AuthServiceProtocol: AnyObject {
     func authServiceShouldPresent(viewController: UIViewController)
     func authServiceSignIn()
     func authServiceSignInDidFail()
