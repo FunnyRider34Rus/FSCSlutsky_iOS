@@ -10,7 +10,7 @@ import VK_ios_sdk
 
 class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
 
-    private let appID = AppConst.appCode
+    private let appID = Const.appCode
     private let vkSDK: VKSdk
     
     override init() {

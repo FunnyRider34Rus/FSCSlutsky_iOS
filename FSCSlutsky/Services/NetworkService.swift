@@ -19,6 +19,7 @@ final class NetworkService: NetworkingProtocol {
         guard let token = authService.token else { return }
         var allParams = params
         allParams["access_token"] = token
+        allParams["domain"] = "fsc_slutsky_vlg"
         allParams["v"] = API.version
         let url = self.url(from: API.newsFeed, params: allParams)
         let request = URLRequest(url: url)

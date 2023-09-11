@@ -13,24 +13,21 @@ struct FeedResponseWrapped: Decodable {
 
 struct FeedResponse: Decodable {
     var items: [FeedItem]
-    var profiles: [Profile]
-    var groups: [Group]
 }
 
 struct FeedItem: Decodable {
-    let sourceId: Int
+    let id: Int
     let date: Double
-    let postId: Int
     let text: String?
     let comments: CountableItem?
     let likes: CountableItem?
     let reposts: CountableItem?
-    let views: CountableItem?
     let attachments: [Attachment]?
 }
 
 struct Attachment: Decodable {
     let photo: Photo?
+    let video: Video?
 }
 
 struct Photo: Decodable {
@@ -59,6 +56,15 @@ struct Photo: Decodable {
     }
 }
 
+struct Video: Decodable {
+    let id: String
+    let date: Double
+    let description: String
+    let photo130: String
+    let comments: Int
+    let views: Int
+}
+
 struct PhotoSize: Decodable {
     let type: String
     let url: String
@@ -68,28 +74,4 @@ struct PhotoSize: Decodable {
 
 struct CountableItem: Decodable {
     let count: Int
-}
-
-protocol ProfileRepresentable {
-    var id: Int { get }
-    var name: String { get }
-    var photo: String { get }
-}
-
-struct Profile: Decodable, ProfileRepresentable {
-    let id: Int
-    let firstName: String
-    let lastName: String
-    let photo100: String
-    
-    var name: String { return firstName + " " + lastName }
-    var photo: String { return photo100 }
-}
-
-struct Group: Decodable, ProfileRepresentable {
-    let id: Int
-    let name: String
-    let photo100: String
-    
-    var photo: String { return photo100 }
 }

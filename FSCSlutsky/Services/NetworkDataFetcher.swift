@@ -20,7 +20,7 @@ struct NetworkDataFetcher: DataFetcher {
     }
     
     func getFeed(response: @escaping (FeedResponse?) -> Void) {
-        let params = ["filters": "post, photo"]
+        let params = ["filters": "all"]
         networking.request(path: API.newsFeed, params: params) { (data, error) in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
