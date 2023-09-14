@@ -10,7 +10,7 @@ import VK_ios_sdk
 
 class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
 
-    private let appID = Const.appCode
+    private let appID = Constants.appCode
     private let vkSDK: VKSdk
     
     override init() {
@@ -28,7 +28,7 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     func wakeUpSession() {
         //массив прав доступа
-        let scope = ["wall", "friends"]
+        let scope = ["wall", "offline"]
         VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
             switch state {
             case .initialized:

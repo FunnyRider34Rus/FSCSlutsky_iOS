@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Кэширование изображений
 class WebImageView: UIImageView {
     
     func set(imageURL: String?) {

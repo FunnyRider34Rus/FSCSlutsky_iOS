@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct FeedResponseWrapped: Decodable {
-    let response: FeedResponse
+struct Response: Decodable {
+    let response: Feeds
 }
 
-struct FeedResponse: Decodable {
-    var items: [FeedItem]
+struct Feeds: Decodable {
+    var items: [Feed]
 }
 
-struct FeedItem: Decodable {
+struct Feed: Decodable {
     let id: Int
     let date: Double
     let text: String?
     let comments: CountableItem?
     let likes: CountableItem?
     let reposts: CountableItem?
-    let attachments: [Attachment]?
+    let attachments: [Attachment]
 }
 
 struct Attachment: Decodable {
@@ -57,12 +57,8 @@ struct Photo: Decodable {
 }
 
 struct Video: Decodable {
-    let id: String
     let date: Double
-    let description: String
     let photo130: String
-    let comments: Int
-    let views: Int
 }
 
 struct PhotoSize: Decodable {

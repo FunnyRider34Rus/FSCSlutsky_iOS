@@ -11,32 +11,29 @@
 		4DFA021FC9A95B30E796F62D /* Pods_FSCSlutskyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1266F9B9940AB44CD2CAAA52 /* Pods_FSCSlutskyTests.framework */; };
 		5C821523350D0B6FADC2E528 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336E717C8FF05C2423CEC9A9 /* Pods_FSCSlutsky_FSCSlutskyUITests.framework */; };
 		DC12EF9D2AA0649E00122BDB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12EF9C2AA0649E00122BDB /* NetworkService.swift */; };
-		DC12EF9F2AA065E500122BDB /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12EF9E2AA065E500122BDB /* API.swift */; };
-		DC12EFA12AA07BED00122BDB /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12EFA02AA07BED00122BDB /* NetworkingProtocol.swift */; };
-		DC2C570D2AADF78F00DAE563 /* NewsfeedCellLayoutCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C570C2AADF78F00DAE563 /* NewsfeedCellLayoutCalculator.swift */; };
-		DC2C570F2AAE08B400DAE563 /* CalcStringToHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C570E2AAE08B400DAE563 /* CalcStringToHeight.swift */; };
-		DC2C57112AAE1BF000DAE563 /* NewsfeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2C57102AAE1BF000DAE563 /* NewsfeedViewCell.swift */; };
 		DC370AC92A9E5F3B002D12DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */; };
 		DC370ACB2A9E5F3B002D12DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ACA2A9E5F3B002D12DB /* SceneDelegate.swift */; };
-		DC370ACD2A9E5F3B002D12DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */; };
 		DC370AD22A9E5F3E002D12DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC370AD12A9E5F3E002D12DB /* Assets.xcassets */; };
 		DC370AD52A9E5F3E002D12DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC370AD32A9E5F3E002D12DB /* LaunchScreen.storyboard */; };
 		DC370AE02A9E5F3F002D12DB /* FSCSlutskyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370ADF2A9E5F3F002D12DB /* FSCSlutskyTests.swift */; };
 		DC370AEA2A9E5F3F002D12DB /* FSCSlutskyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AE92A9E5F3F002D12DB /* FSCSlutskyUITests.swift */; };
 		DC370AEC2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC370AEB2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift */; };
-		DC704B702A9FCDFC0048E52A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B6F2A9FCDFC0048E52A /* Const.swift */; };
-		DC704B722A9FD1580048E52A /* AuthViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC704B712A9FD1580048E52A /* AuthViewController.storyboard */; };
+		DC4962962AB1A928008AD615 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4962952AB1A928008AD615 /* AuthViewController.swift */; };
+		DC4962982AB1B4C3008AD615 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4962972AB1B4C3008AD615 /* DesignSystem.swift */; };
+		DC49629A2AB1CB7E008AD615 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4962992AB1CB7E008AD615 /* Extensions.swift */; };
+		DC5D440B2AB23ECD00E29F86 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5D440A2AB23ECD00E29F86 /* FeedViewCell.swift */; };
+		DC704B702A9FCDFC0048E52A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B6F2A9FCDFC0048E52A /* Constants.swift */; };
 		DC704B742A9FE3650048E52A /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */; };
 		DC86FFEF2A9E66B900A5DA98 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */; };
-		DCB8B4952AABA9CB00BD7719 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B4942AABA9CB00BD7719 /* FeedResponse.swift */; };
+		DCB8B4952AABA9CB00BD7719 /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B4942AABA9CB00BD7719 /* Feeds.swift */; };
 		DCB8B4972AABBDDC00BD7719 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B4962AABBDDC00BD7719 /* NetworkDataFetcher.swift */; };
-		DCB8B4A02AABC7CD00BD7719 /* NewsfeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B4992AABC7CD00BD7719 /* NewsfeedPresenter.swift */; };
-		DCB8B4A12AABC7CD00BD7719 /* NewsfeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B49A2AABC7CD00BD7719 /* NewsfeedWorker.swift */; };
-		DCB8B4A22AABC7CD00BD7719 /* NewsfeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B49B2AABC7CD00BD7719 /* NewsfeedRouter.swift */; };
-		DCB8B4A32AABC7CD00BD7719 /* NewsfeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B49C2AABC7CD00BD7719 /* NewsfeedModels.swift */; };
-		DCB8B4A42AABC7CD00BD7719 /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B49D2AABC7CD00BD7719 /* NewsfeedViewController.swift */; };
-		DCB8B4A52AABC7CD00BD7719 /* NewsfeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB8B49E2AABC7CD00BD7719 /* NewsfeedInteractor.swift */; };
 		DCB951912AAD0ECC002B708B /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB951902AAD0ECC002B708B /* WebImageView.swift */; };
+		DCC2F9442AB0F21E0086E2B5 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2F93D2AB0F21E0086E2B5 /* FeedPresenter.swift */; };
+		DCC2F9452AB0F21E0086E2B5 /* FeedWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2F93E2AB0F21E0086E2B5 /* FeedWorker.swift */; };
+		DCC2F9462AB0F21E0086E2B5 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2F93F2AB0F21E0086E2B5 /* FeedRouter.swift */; };
+		DCC2F9472AB0F21E0086E2B5 /* FeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2F9402AB0F21E0086E2B5 /* FeedModels.swift */; };
+		DCC2F9482AB0F21E0086E2B5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2F9412AB0F21E0086E2B5 /* FeedViewController.swift */; };
+		DCC2F9492AB0F21E0086E2B5 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2F9422AB0F21E0086E2B5 /* FeedInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,15 +61,9 @@
 		5F6EAF22E754C5DB93774259 /* Pods-FSCSlutskyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutskyTests.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutskyTests/Pods-FSCSlutskyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		67F229982E9751C8DCC3883B /* Pods-FSCSlutsky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky/Pods-FSCSlutsky.debug.xcconfig"; sourceTree = "<group>"; };
 		DC12EF9C2AA0649E00122BDB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		DC12EF9E2AA065E500122BDB /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		DC12EFA02AA07BED00122BDB /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
-		DC2C570C2AADF78F00DAE563 /* NewsfeedCellLayoutCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedCellLayoutCalculator.swift; sourceTree = "<group>"; };
-		DC2C570E2AAE08B400DAE563 /* CalcStringToHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcStringToHeight.swift; sourceTree = "<group>"; };
-		DC2C57102AAE1BF000DAE563 /* NewsfeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedViewCell.swift; sourceTree = "<group>"; };
 		DC370AC52A9E5F3B002D12DB /* FSCSlutsky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSCSlutsky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC370ACA2A9E5F3B002D12DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		DC370AD12A9E5F3E002D12DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC370AD42A9E5F3E002D12DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC370AD62A9E5F3E002D12DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,19 +72,22 @@
 		DC370AE52A9E5F3F002D12DB /* FSCSlutskyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSCSlutskyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC370AE92A9E5F3F002D12DB /* FSCSlutskyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCSlutskyUITests.swift; sourceTree = "<group>"; };
 		DC370AEB2A9E5F3F002D12DB /* FSCSlutskyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCSlutskyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		DC704B6F2A9FCDFC0048E52A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		DC704B712A9FD1580048E52A /* AuthViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthViewController.storyboard; sourceTree = "<group>"; };
+		DC4962952AB1A928008AD615 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		DC4962972AB1B4C3008AD615 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		DC4962992AB1CB7E008AD615 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DC5D440A2AB23ECD00E29F86 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
+		DC704B6F2A9FCDFC0048E52A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		DCB8B4942AABA9CB00BD7719 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedResponse.swift; sourceTree = "<group>"; };
+		DCB8B4942AABA9CB00BD7719 /* Feeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeds.swift; sourceTree = "<group>"; };
 		DCB8B4962AABBDDC00BD7719 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
-		DCB8B4992AABC7CD00BD7719 /* NewsfeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedPresenter.swift; sourceTree = "<group>"; };
-		DCB8B49A2AABC7CD00BD7719 /* NewsfeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedWorker.swift; sourceTree = "<group>"; };
-		DCB8B49B2AABC7CD00BD7719 /* NewsfeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedRouter.swift; sourceTree = "<group>"; };
-		DCB8B49C2AABC7CD00BD7719 /* NewsfeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedModels.swift; sourceTree = "<group>"; };
-		DCB8B49D2AABC7CD00BD7719 /* NewsfeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
-		DCB8B49E2AABC7CD00BD7719 /* NewsfeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedInteractor.swift; sourceTree = "<group>"; };
 		DCB951902AAD0ECC002B708B /* WebImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
+		DCC2F93D2AB0F21E0086E2B5 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		DCC2F93E2AB0F21E0086E2B5 /* FeedWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorker.swift; sourceTree = "<group>"; };
+		DCC2F93F2AB0F21E0086E2B5 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		DCC2F9402AB0F21E0086E2B5 /* FeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModels.swift; sourceTree = "<group>"; };
+		DCC2F9412AB0F21E0086E2B5 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DCC2F9422AB0F21E0086E2B5 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
 		DCDEF8476ECBF56C7B9E82BB /* Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3D22E325DB0345D7C5C8072 /* Pods-FSCSlutskyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutskyTests.release.xcconfig"; path = "Target Support Files/Pods-FSCSlutskyTests/Pods-FSCSlutskyTests.release.xcconfig"; sourceTree = "<group>"; };
 		FBE17BCC8577506561842DC5 /* Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig"; path = "Target Support Files/Pods-FSCSlutsky-FSCSlutskyUITests/Pods-FSCSlutsky-FSCSlutskyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,9 +169,9 @@
 		DC370AC72A9E5F3B002D12DB /* FSCSlutsky */ = {
 			isa = PBXGroup;
 			children = (
-				DCB8B4982AABC78700BD7719 /* Newsfeed */,
+				DCC2F93C2AB0F1E90086E2B5 /* Feed */,
 				DCB8B4932AABA99600BD7719 /* Model */,
-				DC704B7A2A9FE9680048E52A /* AuthViewController */,
+				DC704B7A2A9FE9680048E52A /* Authorization */,
 				DC704B6E2A9FCDCA0048E52A /* Core */,
 				DC86FFED2A9E668F00A5DA98 /* Services */,
 				DC370AC82A9E5F3B002D12DB /* AppDelegate.swift */,
@@ -206,42 +200,31 @@
 			path = FSCSlutskyUITests;
 			sourceTree = "<group>";
 		};
-		DC48CBC12AACCFC600AB8AC0 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				DC2C570C2AADF78F00DAE563 /* NewsfeedCellLayoutCalculator.swift */,
-				DC2C57102AAE1BF000DAE563 /* NewsfeedViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		DC704B6E2A9FCDCA0048E52A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				DC704B6F2A9FCDFC0048E52A /* Const.swift */,
+				DC704B6F2A9FCDFC0048E52A /* Constants.swift */,
 				DCB951902AAD0ECC002B708B /* WebImageView.swift */,
-				DC2C570E2AAE08B400DAE563 /* CalcStringToHeight.swift */,
+				DC4962972AB1B4C3008AD615 /* DesignSystem.swift */,
+				DC4962992AB1CB7E008AD615 /* Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		DC704B7A2A9FE9680048E52A /* AuthViewController */ = {
+		DC704B7A2A9FE9680048E52A /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				DC370ACC2A9E5F3B002D12DB /* AuthViewController.swift */,
-				DC704B712A9FD1580048E52A /* AuthViewController.storyboard */,
+				DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */,
+				DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */,
+				DC4962952AB1A928008AD615 /* AuthViewController.swift */,
 			);
-			path = AuthViewController;
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		DC86FFED2A9E668F00A5DA98 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DC86FFEE2A9E66B900A5DA98 /* AuthService.swift */,
-				DC704B732A9FE3650048E52A /* AuthServiceProtocol.swift */,
 				DC12EF9C2AA0649E00122BDB /* NetworkService.swift */,
-				DC12EF9E2AA065E500122BDB /* API.swift */,
-				DC12EFA02AA07BED00122BDB /* NetworkingProtocol.swift */,
 				DCB8B4962AABBDDC00BD7719 /* NetworkDataFetcher.swift */,
 			);
 			path = Services;
@@ -250,23 +233,23 @@
 		DCB8B4932AABA99600BD7719 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DCB8B4942AABA9CB00BD7719 /* FeedResponse.swift */,
+				DCB8B4942AABA9CB00BD7719 /* Feeds.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		DCB8B4982AABC78700BD7719 /* Newsfeed */ = {
+		DCC2F93C2AB0F1E90086E2B5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				DC48CBC12AACCFC600AB8AC0 /* Cell */,
-				DCB8B49D2AABC7CD00BD7719 /* NewsfeedViewController.swift */,
-				DCB8B49E2AABC7CD00BD7719 /* NewsfeedInteractor.swift */,
-				DCB8B4992AABC7CD00BD7719 /* NewsfeedPresenter.swift */,
-				DCB8B49C2AABC7CD00BD7719 /* NewsfeedModels.swift */,
-				DCB8B49A2AABC7CD00BD7719 /* NewsfeedWorker.swift */,
-				DCB8B49B2AABC7CD00BD7719 /* NewsfeedRouter.swift */,
+				DCC2F93D2AB0F21E0086E2B5 /* FeedPresenter.swift */,
+				DCC2F93E2AB0F21E0086E2B5 /* FeedWorker.swift */,
+				DCC2F93F2AB0F21E0086E2B5 /* FeedRouter.swift */,
+				DCC2F9402AB0F21E0086E2B5 /* FeedModels.swift */,
+				DCC2F9412AB0F21E0086E2B5 /* FeedViewController.swift */,
+				DCC2F9422AB0F21E0086E2B5 /* FeedInteractor.swift */,
+				DC5D440A2AB23ECD00E29F86 /* FeedViewCell.swift */,
 			);
-			path = Newsfeed;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +362,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC370AD52A9E5F3E002D12DB /* LaunchScreen.storyboard in Resources */,
-				DC704B722A9FD1580048E52A /* AuthViewController.storyboard in Resources */,
 				DC370AD22A9E5F3E002D12DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,27 +490,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCB8B4A02AABC7CD00BD7719 /* NewsfeedPresenter.swift in Sources */,
+				DCC2F9472AB0F21E0086E2B5 /* FeedModels.swift in Sources */,
 				DCB8B4972AABBDDC00BD7719 /* NetworkDataFetcher.swift in Sources */,
-				DCB8B4A22AABC7CD00BD7719 /* NewsfeedRouter.swift in Sources */,
-				DC370ACD2A9E5F3B002D12DB /* AuthViewController.swift in Sources */,
-				DC2C57112AAE1BF000DAE563 /* NewsfeedViewCell.swift in Sources */,
-				DCB8B4A42AABC7CD00BD7719 /* NewsfeedViewController.swift in Sources */,
-				DCB8B4A32AABC7CD00BD7719 /* NewsfeedModels.swift in Sources */,
-				DC2C570F2AAE08B400DAE563 /* CalcStringToHeight.swift in Sources */,
+				DCC2F9492AB0F21E0086E2B5 /* FeedInteractor.swift in Sources */,
+				DC5D440B2AB23ECD00E29F86 /* FeedViewCell.swift in Sources */,
 				DC704B742A9FE3650048E52A /* AuthServiceProtocol.swift in Sources */,
+				DCC2F9452AB0F21E0086E2B5 /* FeedWorker.swift in Sources */,
 				DC12EF9D2AA0649E00122BDB /* NetworkService.swift in Sources */,
-				DC12EFA12AA07BED00122BDB /* NetworkingProtocol.swift in Sources */,
-				DC2C570D2AADF78F00DAE563 /* NewsfeedCellLayoutCalculator.swift in Sources */,
+				DCC2F9442AB0F21E0086E2B5 /* FeedPresenter.swift in Sources */,
 				DC370AC92A9E5F3B002D12DB /* AppDelegate.swift in Sources */,
 				DC370ACB2A9E5F3B002D12DB /* SceneDelegate.swift in Sources */,
-				DCB8B4A52AABC7CD00BD7719 /* NewsfeedInteractor.swift in Sources */,
-				DCB8B4A12AABC7CD00BD7719 /* NewsfeedWorker.swift in Sources */,
+				DCC2F9462AB0F21E0086E2B5 /* FeedRouter.swift in Sources */,
 				DCB951912AAD0ECC002B708B /* WebImageView.swift in Sources */,
+				DC49629A2AB1CB7E008AD615 /* Extensions.swift in Sources */,
+				DC4962982AB1B4C3008AD615 /* DesignSystem.swift in Sources */,
 				DC86FFEF2A9E66B900A5DA98 /* AuthService.swift in Sources */,
-				DCB8B4952AABA9CB00BD7719 /* FeedResponse.swift in Sources */,
-				DC704B702A9FCDFC0048E52A /* Const.swift in Sources */,
-				DC12EF9F2AA065E500122BDB /* API.swift in Sources */,
+				DCB8B4952AABA9CB00BD7719 /* Feeds.swift in Sources */,
+				DC704B702A9FCDFC0048E52A /* Constants.swift in Sources */,
+				DCC2F9482AB0F21E0086E2B5 /* FeedViewController.swift in Sources */,
+				DC4962962AB1A928008AD615 /* AuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

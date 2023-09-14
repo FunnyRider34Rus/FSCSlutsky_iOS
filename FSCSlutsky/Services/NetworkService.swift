@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol NetworkingProtocol {
+    func request(path: String, params: [String: String], completion: @escaping (Data?, Error?) -> Void)
+}
+
 final class NetworkService: NetworkingProtocol {
     
     private let authService: AuthService
