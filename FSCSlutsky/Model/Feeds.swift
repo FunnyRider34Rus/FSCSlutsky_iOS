@@ -22,10 +22,11 @@ struct Feed: Decodable {
     let comments: CountableItem?
     let likes: CountableItem?
     let reposts: CountableItem?
-    let attachments: [Attachment]
+    let attachments: [Attachment]?
 }
 
 struct Attachment: Decodable {
+    let type: String
     let photo: Photo?
     let video: Video?
 }
@@ -41,7 +42,7 @@ struct Photo: Decodable {
         return getPropperSize().width
     }
     
-    var scrBig: String {
+    var url: String {
         return getPropperSize().url
     }
     
@@ -57,8 +58,7 @@ struct Photo: Decodable {
 }
 
 struct Video: Decodable {
-    let date: Double
-    let photo130: String
+    let photo800: String
 }
 
 struct PhotoSize: Decodable {

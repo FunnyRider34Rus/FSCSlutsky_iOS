@@ -16,11 +16,9 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
 
     var interactor: FeedBusinessLogic?
     var router: (NSObjectProtocol & FeedRoutingLogic)?
+    private var feedViewModel = FeedViewModel(cells: [])
 
-    // MARK: Object lifecycle
-  
     // MARK: Setup
-  
     private func setup() {
         let viewController        = self
         let interactor            = FeedInteractor()
@@ -33,10 +31,6 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         router.viewController     = viewController
     }
   
-    // MARK: Routing
-  
-
-  
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,28 +38,28 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         title = "Новости"
         view.backgroundColor = DesignSystem.Colors.background
         tableView.register(FeedViewCell.self, forCellReuseIdentifier: "FeedCell")
+        tableView.separatorStyle = .none
+        interactor?.makeRequest(request: .getFeed)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return feedViewModel.cells.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as? FeedViewCell else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = "index: \(indexPath.row)"
+        let cellViewModel = feedViewModel.cells[indexPath.row]
+        cell.set(viewModel: cellViewModel)
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        interactor?.makeRequest(request: .getFeed)
     }
   
     func displayData(viewModel: FeedData.Model.ViewModel.ViewModelData) {
         switch viewModel {
-        case .displayFeed:
-            print("FeedViewController .displayFeed")
+        case .displayFeed(let feedViewModel):
+            self.feedViewModel = feedViewModel
+            tableView.reloadData()
         }
     }
 }
