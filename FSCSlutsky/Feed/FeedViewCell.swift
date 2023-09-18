@@ -17,7 +17,7 @@ class FeedViewCell: UITableViewCell {
         return view
     }()
     
-    private let image = WebImageView()
+    private lazy var image = WebImageView()
     
     private let bodyText: UILabel = {
         let label = UILabel()
@@ -38,9 +38,14 @@ class FeedViewCell: UITableViewCell {
         setupViews()
         setupConstraints()
     }
-        
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        image.image = nil
     }
     
     func set(viewModel: FeedCellViewModel) {
@@ -49,9 +54,19 @@ class FeedViewCell: UITableViewCell {
         image.set(imageURL: viewModel.attachment?.imageURL)
         guard let imageWidth = image.image?.size.width else { return }
         guard let imageHeight = image.image?.size.height else { return }
-        var ratio = imageWidth/imageHeight
-        image.heightAnchor.constraint(equalToConstant: CGFloat(imageHeight/ratio)).isActive = true
-        image.clipsToBounds = true
+        let ratio = imageWidth/imageHeight
+        if ratio > 1.0 {
+            image.contentMode = .scaleAspectFit
+            image.heightAnchor.constraint(equalTo: image.widthAnchor, multiplier: imageHeight/imageWidth).isActive = true
+        } else if ratio == 1.0 {
+            image.contentMode = .scaleAspectFill
+            image.heightAnchor.constraint(equalTo: image.widthAnchor).isActive = true
+            image.clipsToBounds = true
+        } else {
+            image.contentMode = .scaleAspectFill
+            image.heightAnchor.constraint(equalTo: image.widthAnchor, multiplier: imageWidth/imageHeight).isActive = true
+        }
+        print(ratio, imageWidth, imageHeight)
     }
     
     private func setupViews() {
@@ -62,16 +77,14 @@ class FeedViewCell: UITableViewCell {
         cardView.addSubview(dateText)
         
         cardView.translatesAutoresizingMaskIntoConstraints = false
-        
         image.translatesAutoresizingMaskIntoConstraints = false
-        
         bodyText.translatesAutoresizingMaskIntoConstraints = false
         dateText.translatesAutoresizingMaskIntoConstraints = false
         
     }
     
     private func setupConstraints() {
-        let screen = contentView//.safeAreaLayoutGuide
+        let screen = contentView.safeAreaLayoutGuide
         cardView.topAnchor.constraint(equalTo: screen.topAnchor, constant: DesignSystem.Insets.large/2).isActive = true
         cardView.bottomAnchor.constraint(equalTo: screen.bottomAnchor, constant: -DesignSystem.Insets.large/2).isActive = true
         cardView.leadingAnchor.constraint(equalTo: screen.leadingAnchor, constant: DesignSystem.Insets.large).isActive = true

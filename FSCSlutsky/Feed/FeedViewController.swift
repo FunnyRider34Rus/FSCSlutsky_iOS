@@ -13,6 +13,8 @@ protocol FeedDisplayLogic: AnyObject {
 }
 
 class FeedViewController: UITableViewController, FeedDisplayLogic {
+    
+    static let identifier = "FeedCell"
 
     var interactor: FeedBusinessLogic?
     var router: (NSObjectProtocol & FeedRoutingLogic)?
@@ -37,7 +39,7 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         setup()
         title = "Новости"
         view.backgroundColor = DesignSystem.Colors.background
-        tableView.register(FeedViewCell.self, forCellReuseIdentifier: "FeedCell")
+        tableView.register(FeedViewCell.self, forCellReuseIdentifier: FeedViewController.identifier)
         tableView.separatorStyle = .none
         interactor?.makeRequest(request: .getFeed)
     }
@@ -47,7 +49,7 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as? FeedViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedViewController.identifier, for: indexPath) as? FeedViewCell else {
             return UITableViewCell()
         }
         let cellViewModel = feedViewModel.cells[indexPath.row]
