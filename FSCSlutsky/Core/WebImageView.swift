@@ -7,9 +7,8 @@
 
 import UIKit
 
-// MARK: Кэширование изображений
+// MARK: Загрузчик изображений
 class WebImageView: UIImageView {
-    
     func set(imageURL: String?) {
         guard let imageURL = imageURL, let url = URL(string: imageURL) else {
             self.image = nil
@@ -32,6 +31,7 @@ class WebImageView: UIImageView {
         dataTask.resume()
     }
     
+    // MARK: Кэширование изображений
     private func handleLoadedImage(data: Data, response: URLResponse) {
         guard let responseURL = response.url else { return }
         let cachedResponse = CachedURLResponse(response: response, data: data)

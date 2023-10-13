@@ -25,9 +25,19 @@ class FeedInteractor: FeedBusinessLogic {
         
         switch request {
         case .getFeed:
+            var result = Feeds(items: [])
             dataFetcher.getFeed { [weak self] (feedResponse) in
                 guard let feedResponse = feedResponse else { return }
-                self?.presenter?.presentData(response: .setFeed(feed: feedResponse))
+                for item in feedResponse.items {
+                    guard let attachments = item.attachments else { return }
+                    for photo in attachments {
+                        if photo.type == "photo" {
+                            result.items.append(item)
+                            break
+                        }
+                    }
+                    self?.presenter?.presentData(response: .setFeed(feed: result))
+                }
             }
         }
     }

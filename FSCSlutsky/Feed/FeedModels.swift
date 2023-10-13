@@ -34,12 +34,12 @@ protocol FeedCellViewModel {
     var attachment: FeedCellAttachmentsViewModel? { get }
 }
 
-
 protocol FeedCellAttachmentsViewModel {
     var imageURL: String? { get }
     var width: Int? { get }
     var height: Int? { get }
 }
+
 struct FeedViewModel {
     struct Cell: FeedCellViewModel {
         var bodyText: String?

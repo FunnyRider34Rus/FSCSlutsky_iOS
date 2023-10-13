@@ -18,32 +18,28 @@ struct Feeds: Decodable {
 struct Feed: Decodable {
     let id: Int
     let date: Double
-    let text: String?
-    let comments: CountableItem?
-    let likes: CountableItem?
-    let reposts: CountableItem?
+    var text: String?
     let attachments: [Attachment]?
 }
 
 struct Attachment: Decodable {
     let type: String
     let photo: Photo?
-    let video: Video?
 }
 
 struct Photo: Decodable {
     let sizes: [PhotoSize]
     
-    var height: Int {
-        return getPropperSize().height
+    var url: String {
+        return getPropperSize().url
     }
     
     var width: Int {
         return getPropperSize().width
     }
     
-    var url: String {
-        return getPropperSize().url
+    var height: Int {
+            return getPropperSize().height
     }
     
     private func getPropperSize() -> PhotoSize {
@@ -57,17 +53,9 @@ struct Photo: Decodable {
     }
 }
 
-struct Video: Decodable {
-    let photo800: String
-}
-
 struct PhotoSize: Decodable {
     let type: String
     let url: String
     let width: Int
     let height: Int
-}
-
-struct CountableItem: Decodable {
-    let count: Int
 }

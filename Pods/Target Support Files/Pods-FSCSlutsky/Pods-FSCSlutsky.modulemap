@@ -1,0 +1,6 @@
+framework module Pods_FSCSlutsky {
+  umbrella header "Pods-FSCSlutsky-umbrella.h"
+
+  export *
+  module * { export * }
+}

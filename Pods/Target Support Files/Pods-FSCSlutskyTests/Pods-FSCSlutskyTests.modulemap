@@ -1,0 +1,6 @@
+framework module Pods_FSCSlutskyTests {
+  umbrella header "Pods-FSCSlutskyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

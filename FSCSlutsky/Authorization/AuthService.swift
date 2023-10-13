@@ -28,7 +28,7 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     
     func wakeUpSession() {
         //массив прав доступа
-        let scope = ["wall", "offline"]
+        let scope = ["offline"]
         VKSdk.wakeUpSession(scope) { [delegate] (state, error) in
             switch state {
             case .initialized:

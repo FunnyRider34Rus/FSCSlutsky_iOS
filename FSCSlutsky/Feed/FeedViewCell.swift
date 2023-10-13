@@ -36,7 +36,6 @@ class FeedViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
-        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -51,22 +50,10 @@ class FeedViewCell: UITableViewCell {
     func set(viewModel: FeedCellViewModel) {
         bodyText.text = viewModel.bodyText
         dateText.text = viewModel.dateText
-        image.set(imageURL: viewModel.attachment?.imageURL)
-        guard let imageWidth = image.image?.size.width else { return }
-        guard let imageHeight = image.image?.size.height else { return }
-        let ratio = imageWidth/imageHeight
-        if ratio > 1.0 {
-            image.contentMode = .scaleAspectFit
-            image.heightAnchor.constraint(equalTo: image.widthAnchor, multiplier: imageHeight/imageWidth).isActive = true
-        } else if ratio == 1.0 {
-            image.contentMode = .scaleAspectFill
-            image.heightAnchor.constraint(equalTo: image.widthAnchor).isActive = true
-            image.clipsToBounds = true
-        } else {
-            image.contentMode = .scaleAspectFill
-            image.heightAnchor.constraint(equalTo: image.widthAnchor, multiplier: imageWidth/imageHeight).isActive = true
+        if let attachment = viewModel.attachment {
+            image.set(imageURL: attachment.imageURL)
+            setupConstraints()
         }
-        print(ratio, imageWidth, imageHeight)
     }
     
     private func setupViews() {
@@ -77,7 +64,7 @@ class FeedViewCell: UITableViewCell {
         cardView.addSubview(dateText)
         
         cardView.translatesAutoresizingMaskIntoConstraints = false
-        image.translatesAutoresizingMaskIntoConstraints = false
+        //image.translatesAutoresizingMaskIntoConstraints = false
         bodyText.translatesAutoresizingMaskIntoConstraints = false
         dateText.translatesAutoresizingMaskIntoConstraints = false
         
@@ -85,20 +72,30 @@ class FeedViewCell: UITableViewCell {
     
     private func setupConstraints() {
         let screen = contentView.safeAreaLayoutGuide
-        cardView.topAnchor.constraint(equalTo: screen.topAnchor, constant: DesignSystem.Insets.large/2).isActive = true
-        cardView.bottomAnchor.constraint(equalTo: screen.bottomAnchor, constant: -DesignSystem.Insets.large/2).isActive = true
+        cardView.topAnchor.constraint(equalTo: screen.topAnchor, constant: DesignSystem.Insets.small).isActive = true
+        cardView.bottomAnchor.constraint(equalTo: screen.bottomAnchor, constant: -DesignSystem.Insets.small).isActive = true
         cardView.leadingAnchor.constraint(equalTo: screen.leadingAnchor, constant: DesignSystem.Insets.large).isActive = true
         cardView.trailingAnchor.constraint(equalTo: screen.trailingAnchor, constant: -DesignSystem.Insets.large).isActive = true
         
-        image.topAnchor.constraint(equalTo: cardView.topAnchor).isActive = true
-        image.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).isActive = true
-        image.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).isActive = true
+        guard let imageWidth = image.image?.size.width else { return }
+        guard let imageHeight = image.image?.size.height else { return }
+        
+        let ratio = imageHeight / imageWidth
+        
+        let imageLayerWidth = UIScreen.main.bounds.width - DesignSystem.Insets.large
+        let imageLayerHeight = ceil(imageLayerWidth * ratio)
+
+        image.frame = CGRect(
+            origin: CGPoint(x: 0, y: 0),
+            size: CGSize(width: imageLayerWidth, height: imageLayerHeight)
+        )
+        image.contentMode = .scaleAspectFill
         
         bodyText.topAnchor.constraint(equalTo: image.bottomAnchor, constant: DesignSystem.Insets.large).isActive = true
         bodyText.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: DesignSystem.Insets.large).isActive = true
-        bodyText.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -DesignSystem.Insets.large).isActive = true
+        bodyText.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -DesignSystem.Insets.small).isActive = true
         
-        dateText.topAnchor.constraint(equalTo: bodyText.bottomAnchor, constant: DesignSystem.Insets.large).isActive = true
+        dateText.topAnchor.constraint(equalTo: bodyText.bottomAnchor).isActive = true
         dateText.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: DesignSystem.Insets.large).isActive = true
         dateText.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -DesignSystem.Insets.large).isActive = true
         dateText.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -DesignSystem.Insets.large).isActive = true

@@ -15,6 +15,7 @@ protocol FeedPresentationLogic {
 class FeedPresenter: FeedPresentationLogic {
     
     weak var viewController: FeedDisplayLogic?
+    
     let dateFormatter: DateFormatter = {
         let dt = DateFormatter()
         dt.locale = Locale(identifier: "ru_RU")
@@ -28,6 +29,7 @@ class FeedPresenter: FeedPresentationLogic {
             let cells = feed.items.map { feed in
                 cellViewModel(from: feed)
             }
+            
             let feedViewModel = FeedViewModel.init(cells: cells)
             
             viewController?.displayData(viewModel: .displayFeed(feedViewModel: feedViewModel))
@@ -38,8 +40,9 @@ class FeedPresenter: FeedPresentationLogic {
         let attachment = self.photoAttachment(feedItem: feedItem)
         let date = Date(timeIntervalSince1970: feedItem.date)
         let dateString = dateFormatter.string(from: date)
+        let formattingText = feedItem.text?.components(separatedBy: "[")[0]
         return FeedViewModel.Cell.init(
-            bodyText: feedItem.text,
+            bodyText: formattingText,
             dateText: dateString,
             attachment: attachment
         )
@@ -60,9 +63,8 @@ class FeedPresenter: FeedPresentationLogic {
             url = attachment.first?.photo?.url
             width = attachment.first?.photo?.width
             height = attachment.first?.photo?.height
-        } else if attachment.first?.type == "video" {
-            url = attachment.first?.video?.photo800
         }
+        
         
         return FeedViewModel.FeedCellAttachmen.init(
             imageURL: url,

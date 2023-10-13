@@ -15,11 +15,11 @@ protocol FeedDisplayLogic: AnyObject {
 class FeedViewController: UITableViewController, FeedDisplayLogic {
     
     static let identifier = "FeedCell"
-
+    
     var interactor: FeedBusinessLogic?
     var router: (NSObjectProtocol & FeedRoutingLogic)?
     private var feedViewModel = FeedViewModel(cells: [])
-
+    
     // MARK: Setup
     private func setup() {
         let viewController        = self
@@ -32,7 +32,7 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         presenter.viewController  = viewController
         router.viewController     = viewController
     }
-  
+    
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         cell.set(viewModel: cellViewModel)
         return cell
     }
-  
+    
     func displayData(viewModel: FeedData.Model.ViewModel.ViewModelData) {
         switch viewModel {
         case .displayFeed(let feedViewModel):

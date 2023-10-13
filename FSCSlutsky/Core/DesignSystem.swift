@@ -17,24 +17,25 @@ struct DesignSystem {
     }
     
     enum CardView {
+        static let insets = UIEdgeInsets(top: 4, left: 8, bottom: -4, right: -8)
         static let corners: CGFloat = 16
     }
     
-    enum Text {
+    enum BodyText {
         enum Font {
             enum Size {
                 static let bodyFontSize = UIFont.systemFont(ofSize: 16)
                 static let dateFontSize = UIFont.systemFont(ofSize: 12)
             }
         }
+        static let insets = UIEdgeInsets(top: 8, left: 8, bottom: -8, right: -8)
     }
     
     enum Insets {
         static let small: CGFloat = 8
         static let medium: CGFloat = 12
         static let large: CGFloat = 16
-        static let cardView = UIEdgeInsets(top: 4, left: 8, bottom: -4, right: -8)
-        static let postLabel = UIEdgeInsets(top: 8, left: 8, bottom: -8, right: -8)
+        
     }
     
     enum Colors {
