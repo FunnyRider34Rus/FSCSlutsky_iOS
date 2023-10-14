@@ -13,5 +13,22 @@
 import UIKit
 
 class FeedService {
-  
+    var authService: AuthService
+    var networking: NetworkingProtocol
+    var fethcer: DataFetcher
+    private var feedResponse: Feeds?
+    
+    init() {
+        self.authService = SceneDelegate.shared().authService
+        self.networking = NetworkService(authService: authService)
+        self.fethcer = NetworkDataFetcher(networking: networking)
+    }
+    
+    func getFeed(completion: @escaping (Feeds) -> Void) {
+        fethcer.getFeed { [weak self] (feed) in
+            self?.feedResponse = feed
+            guard let feedResponse = self?.feedResponse else { return }
+            completion(feedResponse)
+        }
+    }
 }

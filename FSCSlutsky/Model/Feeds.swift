@@ -13,6 +13,7 @@ struct Response: Decodable {
 
 struct Feeds: Decodable {
     var items: [Feed]
+    var nextFrom: String?
 }
 
 struct Feed: Decodable {

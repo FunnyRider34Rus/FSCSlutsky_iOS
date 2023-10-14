@@ -19,11 +19,22 @@ class FeedViewCell: UITableViewCell {
     
     private lazy var image = WebImageView()
     
-    private let bodyText: UILabel = {
-        let label = UILabel()
-        label.textColor = DesignSystem.Colors.text
-        label.numberOfLines = 0
-        return label
+//    private let bodyText: UILabel = {
+//        let label = UILabel()
+//        label.textColor = DesignSystem.Colors.text
+//        label.numberOfLines = 0
+//        return label
+//    }()
+    
+    private let bodyText: UITextView = {
+        let text = UITextView()
+        text.font = DesignSystem.BodyText.Font.font
+        text.isScrollEnabled = false
+        text.isSelectable = true
+        text.isUserInteractionEnabled = true
+        text.isEditable = false
+        text.dataDetectorTypes = UIDataDetectorTypes.link
+        return text
     }()
     
     private let dateText: UILabel = {

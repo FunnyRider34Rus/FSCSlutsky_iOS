@@ -20,6 +20,8 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
     var router: (NSObjectProtocol & FeedRoutingLogic)?
     private var feedViewModel = FeedViewModel(cells: [])
     
+    private let loading = UIRefreshControl()
+    
     // MARK: Setup
     private func setup() {
         let viewController        = self
@@ -37,11 +39,19 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        title = "Новости"
-        view.backgroundColor = DesignSystem.Colors.background
-        tableView.register(FeedViewCell.self, forCellReuseIdentifier: FeedViewController.identifier)
-        tableView.separatorStyle = .none
+        setupTableView()
         interactor?.makeRequest(request: .getFeed)
+    }
+    
+    private func setupTableView() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: DesignSystem.Colors.foreground]
+        title = "Новости"
+        
+        tableView.separatorStyle = .none
+        tableView.refreshControl = loading
+        loading.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(loading)
+        tableView.register(FeedViewCell.self, forCellReuseIdentifier: FeedViewController.identifier)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +72,15 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         case .displayFeed(let feedViewModel):
             self.feedViewModel = feedViewModel
             tableView.reloadData()
+            loading.endRefreshing()
         }
+    }
+    
+    @objc private func refresh() {
+        interactor?.makeRequest(request: .getFeed)
+    }
+    
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
     }
 }

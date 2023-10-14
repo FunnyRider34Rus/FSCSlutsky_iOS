@@ -27,6 +27,7 @@ struct DesignSystem {
                 static let bodyFontSize = UIFont.systemFont(ofSize: 16)
                 static let dateFontSize = UIFont.systemFont(ofSize: 12)
             }
+            static let font = UIFont.systemFont(ofSize: 18)
         }
         static let insets = UIEdgeInsets(top: 8, left: 8, bottom: -8, right: -8)
     }
@@ -39,7 +40,7 @@ struct DesignSystem {
     }
     
     enum Colors {
-        static let foreground = UIColor.systemBlue
+        static let foreground = #colorLiteral(red: 0.125241369, green: 0.6310095787, blue: 0.8865587115, alpha: 1)
         static let background = UIColor.white
         static let text = UIColor.black
         static let date = UIColor.gray

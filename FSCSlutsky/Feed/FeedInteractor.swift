@@ -9,26 +9,23 @@
 import UIKit
 
 protocol FeedBusinessLogic {
-  func makeRequest(request: FeedData.Model.Request.RequestType)
+    func makeRequest(request: FeedData.Model.Request.RequestType)
 }
 
 class FeedInteractor: FeedBusinessLogic {
-
+    
     var presenter: FeedPresentationLogic?
     var service: FeedService?
-    private var dataFetcher: DataFetcher = NetworkDataFetcher(networking: NetworkService())
     
     func makeRequest(request: FeedData.Model.Request.RequestType) {
         if service == nil {
             service = FeedService()
         }
-        
         switch request {
         case .getFeed:
             var result = Feeds(items: [])
-            dataFetcher.getFeed { [weak self] (feedResponse) in
-                guard let feedResponse = feedResponse else { return }
-                for item in feedResponse.items {
+            service?.getFeed(completion: { [weak self] (feed) in
+                for item in feed.items {
                     guard let attachments = item.attachments else { return }
                     for photo in attachments {
                         if photo.type == "photo" {
@@ -38,7 +35,7 @@ class FeedInteractor: FeedBusinessLogic {
                     }
                     self?.presenter?.presentData(response: .setFeed(feed: result))
                 }
-            }
+            })
         }
     }
 }
