@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DataFetcher {
-    func getFeed(response: @escaping (Feeds?) -> Void)
+    func getFeed(nextFrom: Int, response: @escaping (Feeds?) -> Void)
 }
 
 struct NetworkDataFetcher: DataFetcher {
@@ -19,15 +19,15 @@ struct NetworkDataFetcher: DataFetcher {
         self.networking = networking
     }
     
-    func getFeed(response: @escaping (Feeds?) -> Void) {
-        let params = ["filters": "all"]
+    func getFeed(nextFrom: Int, response: @escaping (Feeds?) -> Void) {
+        var params = ["filters": "owner"]
+        params["offset"] = String(nextFrom)
         networking.request(path: API.newsFeed, params: params) { (data, error) in
             if let error = error {
                 print("Error received requesting data: \(error.localizedDescription)")
                 response(nil)
             }
             let decoded = self.decodeJSON(type: Response.self, from: data)
-            //print(decoded?.response as Any)
             response(decoded?.response)
         }
     }

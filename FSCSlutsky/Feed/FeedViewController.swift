@@ -76,11 +76,13 @@ class FeedViewController: UITableViewController, FeedDisplayLogic {
         }
     }
     
-    @objc private func refresh() {
-        interactor?.makeRequest(request: .getFeed)
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if scrollView.contentOffset.y > scrollView.contentSize.height / 1.2 {
+            interactor?.makeRequest(request: .getFeed)
+        }
     }
     
-    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
+    @objc private func refresh() {
+        interactor?.makeRequest(request: .getFeed)
     }
 }

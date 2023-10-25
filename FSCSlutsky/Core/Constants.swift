@@ -18,5 +18,7 @@ struct API {
     static let scheme = "https"
     static let host = "api.vk.com"
     static let version = "5.92"
+    static let domain = "fsc_slutsky_vlg"
+    static let count = 20
     static let newsFeed = "/method/wall.get"
 }
