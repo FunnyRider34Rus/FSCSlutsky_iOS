@@ -12,7 +12,12 @@ class ClubsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
+    }
+    
+    private func setupViews() {
+        title = "Команды"
+        view.backgroundColor = DesignSystem.Colors.background
     }
     
 
